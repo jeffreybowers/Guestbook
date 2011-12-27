@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<projectProfile type="default" version="1.11.10">
+<projectProfile type="default" version="1.10">
   <projectDirectory>
-    <projectProfileFile filesystemName=".zfproject.xml"/>
+    <projectProfileFile/>
     <applicationDirectory classNamePrefix="Application_">
       <apisDirectory enabled="false"/>
       <configsDirectory>
@@ -12,14 +12,23 @@
           <actionMethod actionName="index"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
+        <controllerFile controllerName="Guestbook">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="sign"/>
+        </controllerFile>
       </controllersDirectory>
-      <formsDirectory enabled="false"/>
-      <layoutsDirectory>
-        <layoutScriptsDirectory>
-          <layoutScriptFile layoutName="layout"/>
-        </layoutScriptsDirectory>
-      </layoutsDirectory>
-      <modelsDirectory/>
+      <formsDirectory>
+        <formFile formName="Guestbook"/>
+      </formsDirectory>
+      <layoutsDirectory enabled="false"/>
+      <modelsDirectory>
+        <dbTableDirectory>
+          <dbTableFile dbTableName="Guestbook"/>
+        </dbTableDirectory>
+        <modelFile modelName="Guestbook"/>
+        <modelFile modelName="GuestbookMapper"/>
+        <modelFile modelName="User"/>
+      </modelsDirectory>
       <modulesDirectory enabled="false"/>
       <viewsDirectory>
         <viewScriptsDirectory>
@@ -29,11 +38,17 @@
           <viewControllerScriptsDirectory forControllerName="Error">
             <viewScriptFile forActionName="error"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Guestbook">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Guestbook">
+            <viewScriptFile forActionName="sign"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
       </viewsDirectory>
-      <bootstrapFile filesystemName="Bootstrap.php"/>
+      <bootstrapFile/>
     </applicationDirectory>
     <dataDirectory enabled="false">
       <cacheDirectory enabled="false"/>
@@ -43,9 +58,6 @@
       <sessionsDirectory enabled="false"/>
       <uploadsDirectory enabled="false"/>
     </dataDirectory>
-    <docsDirectory>
-      <file filesystemName="README.txt"/>
-    </docsDirectory>
     <libraryDirectory>
       <zfStandardLibraryDirectory enabled="false"/>
     </libraryDirectory>
@@ -53,20 +65,22 @@
       <publicStylesheetsDirectory enabled="false"/>
       <publicScriptsDirectory enabled="false"/>
       <publicImagesDirectory enabled="false"/>
-      <publicIndexFile filesystemName="index.php"/>
-      <htaccessFile filesystemName=".htaccess"/>
+      <publicIndexFile/>
+      <htaccessFile/>
     </publicDirectory>
     <projectProvidersDirectory enabled="false"/>
     <temporaryDirectory enabled="false"/>
     <testsDirectory>
-      <testPHPUnitConfigFile filesystemName="phpunit.xml"/>
-      <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
+      <testPHPUnitConfigFile/>
       <testApplicationDirectory>
+        <testApplicationBootstrapFile/>
         <testApplicationControllerDirectory>
-          <testApplicationControllerFile forControllerName="Index"/>
+          <testApplicationControllerFile/>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
-      <testLibraryDirectory/>
+      <testLibraryDirectory>
+        <testLibraryBootstrapFile/>
+      </testLibraryDirectory>
     </testsDirectory>
   </projectDirectory>
 </projectProfile>

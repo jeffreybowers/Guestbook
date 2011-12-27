@@ -1,12 +1,4 @@
 <?php
-
-ini_set('display_errors', 1);
-
-//Added an experimental comment
-
-//Added a second one
-
-
 // Define path to application directory
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
